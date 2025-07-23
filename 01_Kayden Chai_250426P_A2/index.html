@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="main.js" defer></script>
+        <link href="style.css" rel="stylesheet">
+
+        <title>Music Production</title>
+    </head>
+
+    <body class="flexContainer">
+
+        <header>
+            <h1>Music Production</h1>
+        </header>
+        
+        <nav> <!--menu system-->
+            <button id="toggleMenuButtonsBtn"><img src="images/menu_icon.png" width="60"></button>
+            <ul id="page-buttons">
+                <div class="hideon-breakpoint"><button id="toggleMenuButtonsBtnX"><img src="images/x-icon.png" width="60"></button></div>
+                <br>
+                <li><button id="page0btn">Home</button></li>
+                <li><button id="page1btn">DAWs</button></li>
+                <li><button id="page2btn">Instruments</button></li>
+                <li><button id="page3btn">Notes</button></li>
+                <li><button id="page4btn">Mixing</button></li>
+                <li><button id="page5btn">Quiz</button></li>
+            </ul>
+        </nav>
+
+        <main id="pagecontainer">
+            <!--Home-->
+            <section id="talkpoint-home" class="talkpoint page page0">
+
+                <h3>
+                    <b>Welcome!</b>
+                </h3>
+
+                <article>
+                    <h4>Discover what goes on behind the scenes of your favourite pieces of music!</h4>
+                    
+                    You will uncover the tools and resources used by some of the most famous modern-day artists such as Avicii, Drake, Taylor Swift, Ed Sheeran and more!
+                    <br>
+                    <div>
+                        <span id="avicii" class="responsive-img"></span>
+                        <span id="drake" class="responsive-img"></span>
+                        <span id="taylorswift" class="responsive-img"></span>
+                        <span id="edsheeran" class="responsive-img"></span>
+                        <br><br>
+                        <!--
+                        <img src="images/avicii.png" width="150" class="responsive-img">
+                        <img src="images/drake.png" width="150" class="responsive-img">
+                        <img src="images/taylorswift.png" width="150" class="responsive-img">
+                        <img src="images/edsheeran.png" width="150" class="responsive-img">-->
+                    </div>
+                </article>
+            </section>
+            
+            <!--DAWs-->
+            <section class="talkpoint talkpoint-left page page1">
+
+                <h3>
+                    What are DAWs?
+                </h3>
+
+                <article>
+                    DAW stands for digital audio workstation. It’s a type of music production software that functions as the computer-based hub of a music studio.
+                    <br><br>
+                    Combined with other software and hardware tools and instruments, producers can use DAWs to compose, record, and mix music of any genre.
+                    <br><br>
+                    There are many different DAWs on the internet, some of the most famous ones include:
+
+                    <br>
+                    <ul>
+                        <li>Ableton</li>
+                        <li>Pro Tools</li>
+                        <li>FL Studio</li>
+                        <li>Logic Pro</li>
+                    </ul>
+
+                    This article will be primarily focusing on the features in <b>FL Studio!</b>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page1">
+
+                <h3>
+                    DAW Websites
+                </h3>
+
+                <article id="music-daw-logos">
+                    To visit the websites of each DAW, click their logo!
+                    <br>
+                    
+                    <a href="https://www.ableton.com/en/" target="_blank"><img src="images/logo_ableton.png" width="200px" title="Ableton" alt="this is the ableton logo" id="ableton-logo" class="responsive-img"></a>
+                    <a href="https://www.avid.com/pro-tools" target="_blank"><img src="images/logo_protools.png" width="200px" title="Protools" alt="this is the protools logo" class="responsive-img"></a>
+                    <a href="https://www.image-line.com/" target="_blank"><img src="images/logo_flstudio.png" width="200px" title="FL Studio" alt="this is the flstudio logo" class="responsive-img"></a>
+                    <a href="https://www.apple.com/sg/logic-pro/" target="_blank"><img src="images/logo_logicpro.png" width="200px" title="Logic Pro" alt="this is the logicpro logo" class="responsive-img"></a>
+                </article>
+            </section>
+
+            <!--Instruments-->
+            <section class="talkpoint talkpoint-left page page2">
+                <h3>
+                    Instruments
+                </h3>
+
+                <article>
+                    To make different sound effects and noises in a DAW such as FL Studio, one can either uses built-in virtual instruments or external Plugins.
+                    <br><br>
+                    These instruments can be used in a variety of ways to manipulate and create various sounds across different genres
+                    <br><br>
+                    Some built-in instruments include the following:
+                    <ul>
+                        <li>FLEX</li>
+                        <li>FL Keys</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page2">
+                <h3>
+                    FLEX
+                </h3>
+
+                <article>
+                    A versatile instrument that offers a wide range of presets and sounds, including synths, pads, and basses.
+                    <br><br>
+                    It is designed to be user-friendly and provides quick access to a variety of sounds.
+                    <br><br>
+                    Click a sound to listen to some of the FLEX synth sounds!
+                    <br><br>
+
+                    <div class="sfx-button-container">
+                        <button class="sfx-button sfx-button-1" id="flex_0">ALUMNI<br>SUN</button>
+                        <button class="sfx-button sfx-button-2" id="flex_1">FUNKY<br>ELECTRICITY</button>
+                        <button class="sfx-button sfx-button-3" id="flex_2">FLUX<br>NAVIGATOR</button>
+                    </div>
+                </article>
+            </section>
+            <section id="talkpoint-piano" class="talkpoint page page0">
+                <h3>
+                    FL Keys
+                </h3>
+
+                <article>
+                    A piano instrument that emulates the sound of a grand piano, electric piano, and other keyboard instruments. It's perfect for adding realistic piano sounds to your tracks.
+                    
+                    <br><br><br>
+                    <div id="piano-box">
+                        <div id="target-note-holder">
+
+                        </div>
+                        <div id="note-holder">
+                            <div class="piano-note" id="piano-note-0"><br><br>C</div>
+                            <div class="piano-note" id="piano-note-1"><br><br>D</div>
+                            <div class="piano-note" id="piano-note-2"><br><br>E</div>
+                            <div class="piano-note" id="piano-note-3"><br><br>F</div>
+                            <div class="piano-note" id="piano-note-4"><br><br>G</div>
+                            <div class="piano-note" id="piano-note-5"><br><br>A</div>
+                            <div class="piano-note" id="piano-note-6"><br><br>B</div>
+                            <span class="piano-note-sharp" id="piano-note-7">C#</span>
+                            <span class="piano-note-sharp" id="piano-note-8">D#</span>
+                            <span class="piano-note-sharp" id="piano-note-9">F#</span>
+                            <span class="piano-note-sharp" id="piano-note-10">G#</span>
+                            <span class="piano-note-sharp" id="piano-note-11">A#</span>
+                        </div>
+                    </div>
+                    <br><br><br>
+                </article>
+            </section>
+
+            <!--Notes-->
+            <section class="talkpoint talkpoint-left page page3">
+                <h3>
+                    Notes
+                </h3>
+
+                <article>
+                    The piano roll tool is the most important tool in a DAW as it determines the notes and chords to be played at the different sections of the song.
+                    <br><br>
+                    Placing down keys is as simple as clicking the part of the keyboard that represents the note that you want to play.
+                    <br><br>
+                    Additionally, DAWs such as FL Studio provide handy tools to modify the keys.
+                    <br><br>
+                    Such tools include:
+                    <ul>
+                        <li>Velocity</li>
+                        <li>Slide</li>
+                        <li>Pan</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page3">
+                <h3>
+                    Velocity
+                </h3>
+
+                <article>
+                    This tool modifies the strength at which the note is played (generally, higher velocity notes are louder)
+                    <br><br>
+                    <div class="sfx-button-container">
+                        <button class="sfx-button sfx-button-4" id="vel_0">LOW<br>VELOCITY</button>
+                        <button class="sfx-button sfx-button-5" id="vel_1">HIGH<br>VELOCITY</button>
+                    </div>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-left page page3">
+                <h3>
+                    Slide
+                </h3>
+
+                <article>
+                    This tool allows for a smooth transition between different notes, otherwise known as "sliding", to increase or decrease the pitch from one note to another.
+                    <br><br>
+                    This is especially useful for songs that need an extra bit of swing and charm!
+                    <br><br>
+                    <div class="sfx-button-container">
+                        <button class="sfx-button sfx-button-4" id="slide_0">NO<br>SLIDE</button>
+                        <button class="sfx-button sfx-button-5" id="slide_1">WITH<br>SLIDE</button>
+                    </div>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page3">
+                <h3>
+                    Pan
+                </h3>
+
+                <article>
+                    This tool allows producers to change the direction from which the sound comes from in a stereo channel.
+                    <br><br>
+                    For instance, turning the pan to the left makes the audio sound like it is coming from the left.
+                    <br><br>
+                    Be sure to have headphones on!
+                    <br><br>
+
+                    <div class="sfx-button-container">
+                        <button class="sfx-button sfx-button-4" id="pan_0">MONO</button>
+                        <button class="sfx-button sfx-button-5" id="pan_1">STEREO</button>
+                    </div>
+                </article>
+            </section>
+
+            <!--Mixing-->
+            <section class="talkpoint talkpoint-left page page4">
+                <h3>
+                    What is Mixing?
+                </h3>
+
+                <article>
+                    Mixing is often one of the final steps in music production.
+                    <br><br>
+                    It is the process of combining and ajusting audio tracks to create a final, cohesive song.
+                    <br><br>
+                    This often involves balancing different effects of individual instruments and sound effects such as the following:
+                    
+                    <ol>
+                        <li>Equalization</li>
+                        <li>Compression</li>
+                        <li>Reverb</li>
+                    </ol>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page4">
+                <h3>
+                    Equalization
+                </h3>
+
+                <article>
+                    This is often seen as the most important component of mixing.
+                    <br><br>
+                    Equalization (EQ) refers to the process of adjusting the volume and level of different <i>frequency bands</i> with an audio signal.
+                    <br><br>
+
+                    <h4>Frequency Bands</h4>
+                    <div>
+                        Audio is composed of various frequencies.
+                        <br><br>
+                        To simplify: Low frequencies tend to be the lower-pitched sounds and high frequencies tend to be the higher-pitched sounds.
+                        <br><br>
+                        Hence, increasing low frequency band volumes make the bass louder and increasing high frequency band volumes make treble louder!
+                        <br><br>
+                        <div class="sfx-button-container">
+                            <button class="sfx-button sfx-button-1" id="freq_0">ALL<br>FREQUENCIES<br>BALANCED</button>
+                            <button class="sfx-button sfx-button-2" id="freq_1">BOOSTED<br>LOW<br>FREQUENCY</button>
+                            <button class="sfx-button sfx-button-3" id="freq_2">BOOSTED<br>MEDIUM<br>FREQUENCY</button>
+                            <button class="sfx-button sfx-button-4" id="freq_3">BOOSTED<br>HIGH<br>FREQUENCY</button>
+                        </div>
+                    </div>
+
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-left page page4">
+                <h3>
+                    Compression
+                </h3>
+
+                <article>
+                    Compression is a technique that reduces the dynamic range of an audio signal, making loud parts quieter and quiet parts louder.
+                    <br><br>
+                    This essentially evens out the volume levels, making the sound more consistent!
+                    <br><br>
+                    Although this effect is often not noticeable, it helps keep a song with many other different sounds feel cohesive with each other.
+                    <br><br>
+                </article>
+            </section>
+            <section class="talkpoint talkpoint-right page page4">
+                <h3>
+                    Reverb
+                </h3>
+
+                <article>
+                    Reverberation ('Reverb' for short) is the effect of sounds creating a series of echoes that gradually fade away.
+                    <br><br>
+                    A common favourite mixing effect, it adds depth and spaciousness to a sound, making it feel like it's being played in a particular environment, from a small room to a large hall.
+                    <br><br>
+                    <div class="sfx-button-container">
+                        <button class="sfx-button sfx-button-4" id="reverb_0">NO<br>REVERB</button>
+                        <button class="sfx-button sfx-button-5" id="reverb_1">WITH<br>REVERB</button>
+                    </div>
+                </article>
+            </section>
+
+
+            
+            <section id="talkpoint-quiz-header" class="talkpoint page page5">
+                <h3>
+                    It's time to test your knowledge of <b>Music Production!</b>
+                </h3>
+                <article class="sfx-button-container">
+                    <button id="quiz-start-button">START<br>QUIZ</button>
+                </article>
+            </section>
+            <div id="quiz-qn-holder">
+                <section class="talkpoint talkpoint-left page page5">
+                    <h3>
+                        What does DAW stand for?
+                    </h3>
+                    <article class="radio-container">
+                        <label><input type="radio" class="quiz-radio" name="q0" value="w"><span class="quiz-radio-text">Digital Audio Workplace</span></label><br>
+                        <label><input type="radio" class="quiz-radio" name="q0" value="w"><span class="quiz-radio-text">Direct Audio Workshop</span></label><br>
+                        <label><input type="radio" class="quiz-radio" name="q0" value="w"><span class="quiz-radio-text">Differential Audio Workplace</span></label><br>
+                        <label><input type="radio" class="quiz-radio" name="q0" value="c"><span class="quiz-radio-text">Digital Audio Workstation</span></label>
+                    </article>
+                </section>
+                <section class="talkpoint talkpoint-right page page5">
+                    <h3>
+                        Which of these is a Piano Roll Tool in FL Studio?
+                    </h3>
+                    <article class="radio-container">
+                        <label><input type="checkbox" class="quiz-radio" name="q1" value="c"><span class="quiz-radio-text">Pan</span></label><br>
+                        <label><input type="checkbox" class="quiz-radio" name="q1" value="w"><span class="quiz-radio-text">Glide</span></label><br>
+                        <label><input type="checkbox" class="quiz-radio" name="q1" value="c"><span class="quiz-radio-text">Velocity</span></label><br>
+                        <label><input type="checkbox" class="quiz-radio" name="q1" value="w"><span class="quiz-radio-text">Phase</span></label><br>
+                    </article>
+                </section>
+                <section class="talkpoint talkpoint-left page page5">
+                    <h3>
+                        Listen to these two variations of a sound.<br>Which frequency band was increased in volume?
+                    </h3>
+                    <article class="radio-container">
+                        <div class="sfx-button-container">
+                            <button class="sfx-button sfx-button-4" id="quiz_freq_0">BEFORE</button>
+                            <button class="sfx-button sfx-button-5" id="quiz_freq_1">AFTER</button>
+                        </div>
+
+                        <label><input type="radio" class="quiz-radio" name="q2" value="w"><span class="quiz-radio-text">Low Frequency</span></label><br>
+                        <label><input type="radio" class="quiz-radio" name="q2" value="w"><span class="quiz-radio-text">Medium Frequency</span></label><br>
+                        <label><input type="radio" class="quiz-radio" name="q2" value="c"><span class="quiz-radio-text">High Frequency</span></label><br>
+                    </article>
+                </section>
+                <section class="talkpoint talkpoint-right page page5">
+                    <h3>
+                        Listen to these two variations of a sound.<br>What is the name of the mixing effect that was applied?
+                    </h3>
+                    <article>
+                        <div class="sfx-button-container">
+                            <button class="sfx-button sfx-button-4" id="quiz_mix_0">BEFORE</button>
+                            <button class="sfx-button sfx-button-5" id="quiz_mix_1">AFTER</button>
+                        </div>
+                        <br>
+                        <input type="text" placeholder="Enter effect name..." id="quiz-textbox" name="q3"><br>
+                    </article>
+                </section>
+                <div id="quiz-complete">
+                    <section class="talkpoint talkpoint-center page page5">
+                        <div class="sfx-button-container">
+                            <br>
+                            <button id="submit-quiz-button" class="sfx-button">SUBMIT</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div id="quiz-results-holder">
+                <section class="talkpoint talkpoint-center page page5">
+                    <h3>
+                        Quiz Complete!
+                    </h3>
+                    <article id="quiz-results-text">
+                        
+                    </article>
+                </section>
+            </div>
+        </main>
+
+        
+        
+
+        <footer>
+            Made by Kayden Chai &copy;
+        </footer>
+
+        <div class="hideon-breakpoint"><div id="wholescreen-cover"></div></div>
+        
+    </body>
+
+</html>

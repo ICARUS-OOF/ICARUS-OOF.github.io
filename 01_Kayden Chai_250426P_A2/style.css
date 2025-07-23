@@ -1,0 +1,715 @@
+
+/*
+#page1{background:red}
+#page2{background:green}
+#page3{background:blue}
+*/
+
+/*Background sticks to the screen*/
+body{
+    /*LINK: https://www.google.com/search?sca_esv=f7156635f6e9a261&rlz=1C1CHBF_enSG920SG920&sxsrf=AE3TifMgG94JoYfwYNk30nUBeZVGK_hT1A:1752071349542&q=music+production+studio+wallpaper&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOha3O1YqG67F0QIhAOFN_ob1yXos5K_Qo9Tq-0cVPzex8akBC0YDCZ6Kdb3tXvKc6RFIhZ6v3hyM8cCODBzLMpebLyG_wEobHUmbBx7IbAcqlyOIAEPGkexCDHE5Ucw_PMq9CPq7nDgGza9yXmpe03QQmYXXxw&sa=X&ved=2ahUKEwiroKSz_q-OAxVx-DgGHZdxEgsQtKgLKAF6BAgPEAE&biw=1745&bih=828&dpr=1.1#vhid=KU88thsBbYhicM&vssid=mosaic*/
+    background-image: url("./images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@font-face{
+    /*LINK: https://www.dafont.com/coolvetica.font*/
+    font-family: "coolvetica";
+    src: url(./fonts/Coolvetica\ Rg.otf);
+}
+
+@font-face{
+    /*LINK: https://www.dafont.com/akira-expanded.font*/
+    font-family: "akira";
+    src: url(fonts/Akira\ Expanded\ Demo.otf)
+}
+
+@font-face{
+    /*LINK: https://www.dafont.com/akira-expanded.font*/
+    font-family: "roboto";
+    src: url(fonts/Roboto-Medium.ttf)
+}
+
+@font-face{
+    /*LINK: https://www.dafont.com/caviar-dreams.font*/
+    font-family: "caviar-dreams";
+    src: url(fonts/CaviarDreams.ttf)
+}
+
+* {
+    font-family: "caviar-dreams";
+    color: white;
+}
+
+
+body{
+    margin: 40px;
+    border-radius: 10px;
+    animation: borderFadeAnim 1s;
+    outline: 4px solid rgb(214, 214, 214);
+}
+@keyframes borderFadeAnim{
+    0%{outline: 4px solid rgb(214, 214, 214, 0)}
+    100%{outline: 4px solid rgb(214, 214, 214, 255)}
+}
+
+#toggleMenuButtonsBtn{display:none;}
+#toggleMenuButtonsBtnX{display:none;}
+.hideon-breakpoint{display:none;}
+/*to unhide menu items*/
+.menuShow{display:block;}
+
+
+#wholescreen-cover {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #000000a4;
+}
+
+.flexContainer {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+nav ul {
+    justify-self: center;
+    padding-inline-start: 0px;
+    list-style: none;
+}
+@keyframes navButtonList{
+    0%{bottom: 100px;opacity: 0;}
+    100%{bottom: 0px;opacity: 1;}
+}
+nav ul li {
+    display: inline;
+    position: relative;
+    animation: navButtonList 1.2s;
+}
+nav ul li button {
+    font-size: 1.4vw;
+    width: 9vw;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.06s;
+    transition: font-size 0.06s;
+}
+nav ul li button:hover{
+    background-color: rgb(148,148,148, 0.3);
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+header {
+    flex: 3;
+    height: 150px;
+}
+@keyframes h1Move{
+    0%{right: 800px;opacity: 0;}
+    100%{right: 0px;opacity: 1;}
+}
+h1 {
+    position: relative;
+    font-family: "caviar-dreams";
+    font-size: 45px;
+    justify-self: center;
+    text-align: center;
+    color: #EAEFEF;
+    animation: h1Move 1.7s;
+    transition: font-size 0.2s;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+nav {
+    flex: 5;
+    height: 150px;
+}
+
+main {
+    flex: 100%;
+}
+
+footer {
+    margin: 15px;
+    flex: 100%
+}
+
+
+
+.talkpoint {
+    width: 60%;
+    padding: 0.1px 20px 20px 20px;
+    margin: 5%;
+    outline: 4px solid rgb(214, 214, 214, 1);
+    border-radius: 10px;
+    background-color: rgba(50, 50, 50, 0.721);
+    transition: width 0.6s;
+}
+@keyframes talkingLeftAppearAnim{
+    0% {margin-left: 2000px;}
+    100% {margin-left: 100px;}
+}
+.talkpoint-left{
+    margin-left: 100px;
+    animation: talkingLeftAppearAnim 1s;
+}
+@keyframes talkpointRightAppearAnim{
+    0% {margin-right: 2000px;}
+    100% {margin-right: 100px;}
+}
+.talkpoint-right{
+    justify-self: right;
+    margin-right: 100px;
+    animation: talkpointRightAppearAnim 1s;
+}
+@keyframes talkpointCenterAppearAnim{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.talkpoint-center{
+    opacity: 1;
+    justify-self: center;
+    animation: talkpointCenterAppearAnim 1s;
+}
+.talkpoint-center h3{
+    text-align: center;
+}
+
+
+@keyframes talkingPointHomeAppearAnim{
+    0% {margin-left: 200%;}
+    100% {left: 0%;}
+}
+#talkpoint-home{
+    width: 80%;
+    justify-self: center;
+    left: 0%;
+    animation: talkingPointHomeAppearAnim 1s;
+    transition: width 0.6s;
+}
+
+@keyframes talkpointPianoAppearAnim{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+#talkpoint-piano{
+    width: 90%;
+    opacity: 1;
+    justify-self: center;
+    animation: talkpointPianoAppearAnim 1s;
+}
+
+
+
+
+
+#talkpoint-home h3 {
+    background-color: transparent;
+    outline: none;
+    text-align: center;
+    border-radius: 0px;
+    font-size: 50px;
+    width: 98%;
+    margin: 20px 0px
+}
+
+#talkpoint-home article {
+    text-align: center;
+    font-size: 20px;
+}
+
+#talkpoint-home h4 {
+    font-size: 30px;
+}
+
+
+
+
+@keyframes talkingPointQuizHeaderAppearAnim{
+    0% {margin-left: 200%;}
+    100% {left: 0%;}
+}
+#talkpoint-quiz-header{
+    width: 80%;
+    justify-self: center;
+    left: 0%;
+    animation: talkingPointQuizHeaderAppearAnim 1s;
+    transition: width 0.6s;
+}
+#talkpoint-quiz-header:hover{
+    width: 85%;
+}
+#talkpoint-quiz-header h3 {
+    text-align: center;
+    width: 98%;
+}
+#talkpoint-quiz-header article {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+/*
+@keyframes talkingPointQuizQnAppearAnim{
+    0% {margin-left: 200%;}
+    100% {left: 0%;}
+}
+#talkpoint-quiz-qn{
+    width: 75%;
+    justify-self: center;
+    left: 0%;
+    animation: talkingPointQuizQnAppearAnim 1s;
+    transition: width 0.6s;
+}
+#talkpoint-quiz-qn:hover{
+    width: 80%;
+}*/
+
+
+
+.talkpoint h3 {
+    background-color: rgba(93, 93, 93, 0.442);
+    outline: 4px solid rgb(214, 214, 214, 255);
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+.talkpoint article {
+    background-color: rgba(93, 93, 93, 0.442);
+    outline: 4px solid rgb(214, 214, 214, 1);
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 10px 10px;
+}
+.talkpoint article h4{
+    font-size: 21px;
+}
+
+li {
+    font-size: 23px;
+}
+
+
+
+#music-daw-logos{
+    
+    padding: 10px;
+    justify-self: center;
+    justify-content: center;
+}
+#ableton-logo{
+    border-radius: 100px;
+}
+
+.sfx-button-container{
+    justify-self: center;
+}
+
+.sfx-button{
+    color: white;
+    border: 4px white solid;
+    background-color: rgba(255, 255, 255, 0.14);
+    font-size: 23px;
+    border-radius: 95px;
+    width: 190px;
+    height: 190px;
+    margin: 10px;
+    transition: border-color 0.2s;
+}
+
+.sfx-button-1{
+    border-color: rgb(206, 248, 255);
+}
+.sfx-button-1:hover {
+    border-color: rgb(120, 178, 189);
+}
+.sfx-button-2{
+    border-color: rgb(255, 232, 206);
+}
+.sfx-button-2:hover{
+    border-color: rgb(148, 128, 105);
+}
+.sfx-button-3{
+    border-color: rgb(255, 206, 253);
+}
+.sfx-button-3:hover{
+    border-color: rgb(141, 102, 140);
+}
+.sfx-button-4{
+    border-color: rgb(255, 206, 206);
+}
+.sfx-button-4:hover{
+    border-color: rgb(121, 85, 85);
+}
+.sfx-button-5{
+    border-color: rgb(206, 255, 210);
+}
+.sfx-button-5:hover{
+    border-color: rgb(90, 124, 92);
+}
+
+
+.sfx-button-click{
+    animation: sfx-button-click-animation 1.8s;
+}
+
+@keyframes sfx-button-click-animation {
+    0% {
+        background-color: rgba(255, 255, 255, 0.14);
+        width: 190px;
+    }
+    10% {
+        background-color: rgba(240, 98, 55, 0.4);
+        width: 215px;
+    }
+    20% {
+        background-color: rgba(255, 130, 228, 0.4);
+        width: 190px;
+    }
+    30% {
+        background-color: rgba(130, 255, 172, 0.4);
+        width: 210px;
+    }
+    40% {
+        background-color: rgba(243, 255, 130, 0.4);
+        width: 190px;
+    }
+    50% {
+        background-color: rgba(147, 145, 255, 0.4);
+        width: 205px;
+    }
+    60% {
+        background-color: rgba(255, 68, 68, 0.4);
+        width: 195px;
+    }
+    70% {
+        background-color: rgba(68, 255, 68, 0.4);
+        width: 200px;
+    }
+    80% {
+        background-color: rgba(255, 68, 230, 0.4);
+        width: 190px;
+    }
+    90% {
+        background-color: rgba(219, 133, 35, 0.4);
+        width: 195px;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.14);
+        width: 190px;
+    }
+}
+
+
+#quiz-start-button{
+    justify-self: center;
+    color: white;
+    border: 4px white solid;
+    background-color: rgba(255, 255, 255, 0.14);
+    font-size: 23px;
+    border-radius: 95px;
+    width: 190px;
+    height: 190px;
+    transition: border-color 0.2s;
+}
+
+.radio-container {
+    justify-content: space-around;
+    outline: 5px white solid;
+}
+
+.quiz-radio {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}
+.quiz-radio-text {
+    font-size: 30px;
+}
+
+#quiz-textbox{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+#quiz-qn-holder{
+    display: none;
+}
+
+#quiz-results-holder {
+    display: none;
+}
+
+#quiz-results-holder section article {
+    text-align: center;
+}
+
+
+
+#producers-container {
+    border: 4px solid rgb(214, 214, 214, 1);
+    justify-self: center;
+    width: 90%;
+    height: 250px;
+}
+
+
+#edsheeran, #drake, #avicii, #taylorswift {
+    background-image: url('images/producers-spritesheet.png');
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;
+    display: inline-block;
+}
+#edsheeran {
+    background-position: 0px, 0px;
+}
+#drake {
+    background-position: -150px, 0px;
+}
+#avicii {
+    background-position: -300px, 0px;
+}
+#taylorswift {
+    background-position: -450px, 0px;
+}
+
+
+#piano-box {
+    justify-self: center;
+    border: 4px solid rgb(214, 214, 214, 1);
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.piano-note {
+    position: relative;
+    color: black;
+    text-align: center;
+    justify-self: center;
+    background-color: white;
+    font-size: 16px;
+    width: 55px;
+    height: 75px;
+    margin: -3px;
+    top: 320px;
+    left: 11px;
+    display: inline-block;
+    transition: background-color 0.1s;
+}
+.piano-note:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.piano-note-sharp{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    z-index: 1;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    width: 26px;
+    height: 50px;
+    display: inline-block;
+    top: 245px;
+    transition: background-color 0.1s;
+}
+.piano-note-sharp:hover{
+    background-color: rgb(75, 75, 75);
+}
+
+#note-holder {
+    justify-self: center;
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+}
+#target-note-holder {
+    justify-self: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#piano-note-7{
+    left: 50px;
+}
+#piano-note-8{
+    left: 75px;
+}
+#piano-note-9{
+    left: 150px;
+}
+#piano-note-10{
+    left: 175px;
+}
+#piano-note-11{
+    left: 200px;
+}
+#target-note-holder {
+    justify-self: left;
+    width: 0px;
+    height: 0px;
+}
+.target-note{
+    position: absolute;
+    left: 0px;
+    background-size: cover;
+    text-align: center;
+}
+
+
+
+
+
+#responsive-img {
+    max-width: 100%;
+}
+
+
+@media (max-width:799px){
+
+    body {
+        outline: none;
+        animation: none;
+    }
+
+    .hideon-breakpoint{display:block;}
+    /* unhide menu icon */
+    #toggleMenuButtonsBtn{display:block;} 
+    /*hide the menu item list*/
+    nav ul{display:none;}
+
+
+    h1 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .talkpoint {
+        width: 80%;
+        justify-self: center;
+        margin: 5%;
+        outline: 4px solid rgb(214, 214, 214, 1);
+        border-radius: 10px;
+        background-color: rgba(50, 50, 50, 0.721);
+        transition: width 0.6s;
+    }
+    .talkpoint-left{
+        width: 80%;
+        justify-self: center;
+        animation: none;
+        opacity: 1;
+    }
+    .talkpoint-right{
+        width: 80%;
+        justify-self: center;
+        animation: none;
+        opacity: 1;
+    }
+
+    #quiz-qn-holder section h3 {
+        font-size: 23px;
+    }
+    #quiz-qn-holder section * {
+        font-size: 18px;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+    header {
+        flex: 10;
+    }
+
+    #toggleMenuButtonsBtn{
+        margin-left: 45px;
+        margin-top: 0px;
+        background-color: #ffffff00;
+        border: none;
+    }
+    #toggleMenuButtonsBtn img {
+        background-color: none;
+        transition: background-color 0.1s;
+        border-radius: 6px;
+    }
+    #toggleMenuButtonsBtn img:hover {
+        background-color: #b4b4b47a;
+    }
+
+    #toggleMenuButtonsBtnX{
+        justify-self: center;
+        margin-top: 40px;
+        background-color: #ffffff00;
+        border: none;
+        display: none;
+    }
+    #toggleMenuButtonsBtnX img {
+        background-color: none;
+        transition: background-color 0.1s;
+        border-radius: 6px;
+    }
+    #toggleMenuButtonsBtnX img:hover {
+        background-color: #b4b4b47a;
+    }
+
+    nav {
+        
+        z-index: 4;
+    }
+
+    nav #page-buttons li button {
+        width: 100%;
+        font-size: 20px;
+
+    }
+
+    @keyframes page-buttons-entry{
+        0% {right: -300px}
+        100% {right: 0px}
+    }
+
+    nav #page-buttons{
+        right: 0px;
+        width: 240px;
+        height: 100vh;
+        background-color: rgba(33, 74, 107, 0.719);
+        animation: none;
+        position: fixed;
+        margin-top: 0px;
+        top: 0px;
+        bottom: 0px;
+        animation: page-buttons-entry 0.5s;
+    }
+    nav #page-buttons li {
+        animation: none;
+    }
+
+    nav #page-buttons li button {
+        height: 55px;
+    }
+    
+}
